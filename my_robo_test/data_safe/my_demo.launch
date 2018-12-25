@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<launch>
+  <!-- gazeboo -->
+  <include file="$(find my_robo_gazebo)/launch/my_robo_world.launch" />   
+
+  <!-- Load the URDF, SRDF and other .yaml configuration files on the param server -->
+  <include file="$(find my_robo_moveit)/launch/planning_context.launch">
+    <arg name="load_robot_description" value="true"/>
+  </include>
+
+  <!-- controller -->
+  <rosparam file="$(find my_robo_moveit)/config/trajectory_control.yaml" command="load"/>
+  <node name="my_robo_controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="/my_robo" args="arm_position_controller joint_state_controller"/>
+
+  <!-- MoveIt -->
+  <include file="$(find my_robo_moveit)/launch/move_group.launch">
+    <arg name="publish_monitored_planning_scene" value="true" />
+    <arg name="allow_trajectory_execution" value="true"/>  
+    <arg name="fake_execution" value="false"/>
+    <arg name="info" value="true"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+  <!-- Rviz and load the default config to see the state of the move_group node -->
+  <include file="$(find my_robo_moveit)/launch/moveit_rviz.launch">
+    <arg name="config" value="true"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+</launch>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Robot state publisher -->
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+  </node>
+
+  <!-- joint_state_controller -->
+   <rosparam file="$(find my_robo_gazebo)/config/joint_state_controller.yaml" command="load"/>
+
+ <rosparam file="$(find my_robo_gazebo)/config/my_robo_controller_tr.yaml" command="load"/>
+
+
+  <node name="joint_state_controller_spawner" pkg="controller_manager" type="spawner" args="joint_state_controller
+                arm_position_controller"
+       respawn="false" output="screen"/>
+  
+</launch>

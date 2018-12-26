@@ -1,5 +1,0 @@
-position_controllers/JointTrajectoryController
-
-gazebo+moveitの起動pkg  my_robo_launch
-
-

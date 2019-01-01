@@ -4,7 +4,7 @@
 
   <include file="$(find my_robo_gazebo)/launch/my_robo_world_moveit.launch"/>
   <include file="$(find my_robo_moveit)/launch/demo_planning_execution.launch"/>
-  <node pkg = "camera_ope_opencv" name="circle_point1" type="circle_point1"/>
-  <node pkg = "camera_ope_opencv" name="circle_point2" type="circle_point2"/>
+  <node pkg = "camera_ope_opencv" name="contour_point1" type="contour_point1"/>
+  <node pkg = "camera_ope_opencv" name="contour_point2" type="contour_point2"/>
 
 </launch>

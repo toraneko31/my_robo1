@@ -64,9 +64,11 @@ class Distance
   {
 
     next_pose = nh.advertise<std_msgs::Float32MultiArray>("/next_pose",10);
-    point_get_sub1 = nh.subscribe("/center_point1",10,&Distance::getCb,this);
-    point_get_sub2 = nh.subscribe("/center_point2",10,&Distance::getCb,this);
-    image_centor1 = nh.subscribe("/image_centor1",10,&Distance::getCameraCentor1,this);
+    //point_get_sub1 = nh.subscribe("/center_point1",10,&Distance::getCb,this);
+    //point_get_sub2 = nh.subscribe("/center_point2",10,&Distance::getCb,this);
+   point_get_sub1 = nh.subscribe("/contour_point1",10,&Distance::getCb,this);
+   point_get_sub2 = nh.subscribe("/contour_point2",10,&Distance::getCb,this);
+   image_centor1 = nh.subscribe("/image_centor1",10,&Distance::getCameraCentor1,this);
     image_centor2 = nh.subscribe("/image_centor2",10,&Distance::getCameraCentor2,this);
   }
   ~Distance()

@@ -26,6 +26,24 @@
         <joint name="joint3" value="1.57" />
         <joint name="joint4" value="0" />
     </group_state>
+    <group_state name="search0" group="arm">
+        <joint name="joint1" value="0" />
+        <joint name="joint2" value="-1.57" />
+        <joint name="joint3" value="2.7" />
+        <joint name="joint4" value="0" />
+    </group_state>
+    <group_state name="searchR" group="arm">
+        <joint name="joint1" value="-0.785" />
+        <joint name="joint2" value="-1.57" />
+        <joint name="joint3" value="2.7" />
+        <joint name="joint4" value="0" />
+    </group_state>
+    <group_state name="searchL" group="arm">
+        <joint name="joint1" value="0.785" />
+        <joint name="joint2" value="-1.57" />
+        <joint name="joint3" value="2.7" />
+        <joint name="joint4" value="0" />
+    </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="een" parent_link="link5" group="ee" parent_group="arm" />
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->

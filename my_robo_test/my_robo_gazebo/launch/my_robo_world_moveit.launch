@@ -32,9 +32,9 @@
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
     args="-urdf -model my_robo -param robot_description"/>
 
-  <node name="box1_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+<!--  <node name="box1_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
     args="-urdf -model box1 -param box1"/>
-
+-->
   <node name="ball1_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
     args="-urdf -model ball1 -param ball1"/>
 

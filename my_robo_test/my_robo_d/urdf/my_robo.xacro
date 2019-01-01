@@ -13,7 +13,7 @@
   <xacro:property name="width2" value="0.1"/>
   <xacro:property name="width3" value="0.4"/>
   <xacro:property name="width4" value="0.4"/>
-  <xacro:property name="width5" value="0.2"/>
+  <xacro:property name="width5" value="0.01"/>
   <xacro:property name="width6" value="0.025"/>
 
   <xacro:property name="size_cam" value="0.03"/>

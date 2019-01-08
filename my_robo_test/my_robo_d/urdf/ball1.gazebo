@@ -1,8 +1,12 @@
 <?xml version="1.0"?>
 <robot>
   <gazebo reference = "link1">
-    <mu1>0.0</mu1>
-    <mu2>0.0</mu2>
-    <material>Gazebo/White</material>
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+    <!--<maxVel value="10"/>
+    <minDepth value="0.002"/>
+    <kp value="10000"/>
+    <kd value="100"/>-->
+   <material>Gazebo/Red</material>
   </gazebo>
 </robot>

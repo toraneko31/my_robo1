@@ -21,6 +21,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   shape_msgs
   std_msgs
+  tf
 )
 
 ## System dependencies are found with CMake's conventions
@@ -213,6 +214,11 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+add_executable(arm_plan src/arm_plan.cpp)
+target_link_libraries(arm_plan
+  ${catkin_LIBRARIES}
+  ${Boost_LIBRARIES}
+)
 
 add_executable(arm_plan_defo src/arm_plan_defo.cpp)
 target_link_libraries(arm_plan_defo
@@ -236,6 +242,16 @@ target_link_libraries(pose_set
 )
 add_executable(search src/search.cpp)
 target_link_libraries(search
+  ${catkin_LIBRARIES}
+  ${Boost_LIBRARIES}
+)
+add_executable(local_test src/local_test.cpp)
+target_link_libraries(local_test
+  ${catkin_LIBRARIES}
+  ${Boost_LIBRARIES}
+)
+add_executable(gripper_plan src/gripper_plan.cpp)
+target_link_libraries(gripper_plan
   ${catkin_LIBRARIES}
   ${Boost_LIBRARIES}
 )

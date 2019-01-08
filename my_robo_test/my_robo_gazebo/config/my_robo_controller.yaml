@@ -10,3 +10,11 @@ arm_posision_controller:
       joint2: {p: 1,  d: 0.1, i: 0.01, i_clamp: 1}
       joint3: {p: 1,  d: 0.1, i: 0.01, i_clamp: 1}
       joint4: {p: 1,  d: 0.1, i: 0.01, i_clamp: 1}
+ee_posision_controller:
+  type: position_controllers/JointPositionController
+  joints: 
+     - joint5
+     - joint6
+  gains:
+      joint5: {p: 1,  d: 0.1, i: 0.01, i_clamp: 1}
+      joint6: {p: 1,  d: 0.1, i: 0.01, i_clamp: 1}
